@@ -8,15 +8,18 @@ public class Employee<employees> {
     private final String lastName;
     private int department;
     private int salaryMonth;
+   //private final int id;
 
-    public Employee(String lastName, String firstName, String fatherName, int department, int salaryMonth) {
+    public Employee( String lastName, String firstName, String fatherName, int department, int salaryMonth) {
         this.firstName = firstName;
         this.fatherName = fatherName;
         this.lastName = lastName;
         this.department = department;
         this.salaryMonth = salaryMonth;
+     //   this.id = id;
 
     }
+
 
     public int getSalaryMonth() {
         return salaryMonth;
