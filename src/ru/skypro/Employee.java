@@ -1,5 +1,7 @@
 package ru.skypro;
 
+import java.util.Arrays;
+import java.util.Objects;
 import java.util.StringJoiner;
 
 public class Employee<employees> {
@@ -8,18 +10,15 @@ public class Employee<employees> {
     private final String lastName;
     private int department;
     private int salaryMonth;
-   //private final int id;
 
-    public Employee( String lastName, String firstName, String fatherName, int department, int salaryMonth) {
+
+    public Employee(String lastName, String firstName, String fatherName, int department, int salaryMonth) {
         this.firstName = firstName;
         this.fatherName = fatherName;
         this.lastName = lastName;
         this.department = department;
         this.salaryMonth = salaryMonth;
-     //   this.id = id;
-
     }
-
 
     public int getSalaryMonth() {
         return salaryMonth;
@@ -34,10 +33,11 @@ public class Employee<employees> {
     }
 
     public String getFatherName() {
-        return this.fatherName; }
+        return this.fatherName;
+    }
 
     public String getFullName() {
-        return this.lastName+firstName+fatherName;
+        return this.lastName + firstName + fatherName;
     }
 
     public String getLastName() {
@@ -59,4 +59,3 @@ public class Employee<employees> {
     }
 
 }
-
