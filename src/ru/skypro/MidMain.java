@@ -13,13 +13,13 @@ public class MidMain {
         return false;
     }
 
-//    public static void printEmployeesByDepartment(int department){
-//        for (Employee employee:employees
-//        ) {
-//            if(employee !=null && employee.getDepartment()==department){
-//
-//                System.out.println(employee.getId+", "+employee.getFullName()+", "+employee.getSalaryMonth());
-//        }}}
+    public static void printEmployeesByDepartment(int department){
+        for (Employee employee:employees
+        ) {
+            if(employee !=null && employee.getDepartment()==department){
+
+                System.out.println(employee.getId()+", "+employee.getFullName()+", "+employee.getSalaryMonth());
+        }}}
 
     private static float calculateTotalSalaryInDepartment(int department) {
         float sumInDepartment = 0;
@@ -98,7 +98,7 @@ public static void salaryIncreaseInDepartment (int department, float percentOfIn
         addEmployee(new Employee("Пак", "Сергей", "Валентинович", 4, 95000));
         addEmployee(new Employee("Директор", "Вячеслав", "Степанович", 5, 250000));
 
-        //printEmployeesByDepartment(department);
+        printEmployeesByDepartment(department);
         System.out.println("Затраты отдела на ЗП в месяц: "+calculateTotalSalaryInDepartment(department));
         System.out.println("Сотрудник с минимальной зп в отделе: "+findEmployeeWithMinSalaryInDepartment(department));
         System.out.println("Сотрудник с максимальной зп в отделе: "+findEmployeeWithMaxSalaryInDepartment(department));

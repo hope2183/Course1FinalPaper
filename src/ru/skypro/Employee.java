@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Objects;
 import java.util.StringJoiner;
 
-public class Employee<employees> {
+public class Employee {
     private static int counter = 1;
     private int id;
 
@@ -61,8 +61,9 @@ public class Employee<employees> {
         this.department = department;
     }
 
-    public void getId(int id) {
-        this.id = id ;
+    public int getId() {
+        this.id = id;
+        return id;
     }
 
 
