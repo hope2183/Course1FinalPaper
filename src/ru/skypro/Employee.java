@@ -62,7 +62,7 @@ public class Employee<employees> {
     }
 
     public void getId(int id) {
-        this.id = id;
+        this.id = id ;
     }
 
 

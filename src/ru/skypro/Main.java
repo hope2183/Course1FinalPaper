@@ -86,7 +86,7 @@ public class Main {
         addEmployee(new Employee("Директор", "Вячеслав", "Степанович", 5, 250000));
         printEmployees();
         System.out.println("Затраты на ЗП в месяц: "+calculateTotalSalary());
-        System.out.println("Сотружник с минимальной зп: "+findEmployeeWithMinSalary());
+        System.out.println("Сотрудник с минимальной зп: "+findEmployeeWithMinSalary());
         System.out.println("Сотрудник с максимальной зп: "+findEmployeeWithMaxSalary());
         System.out.println("Средняя зп в месяц: "+calculateAverageSalary());
         printEmployeesNamesOnly();
