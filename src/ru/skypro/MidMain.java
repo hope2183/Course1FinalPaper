@@ -18,7 +18,7 @@ public class MidMain {
         ) {
             if(employee !=null && employee.getDepartment()==department){
 
-                System.out.println(employee.getId()+", "+employee.getFullName()+", "+employee.getSalaryMonth());
+                System.out.println(employee.getId()+". Сотрудник: "+employee.getFullName()+", заработная плата: "+employee.getSalaryMonth());
         }}}
 
     private static float calculateTotalSalaryInDepartment(int department) {
@@ -103,6 +103,9 @@ public static void salaryIncreaseInDepartment (int department, float percentOfIn
         System.out.println("Сотрудник с минимальной зп в отделе: "+findEmployeeWithMinSalaryInDepartment(department));
         System.out.println("Сотрудник с максимальной зп в отделе: "+findEmployeeWithMaxSalaryInDepartment(department));
         System.out.println("Средняя зп в месяц по отделу: "+calculateAverageSalaryInDepartment(department));
+
+        salaryIncreaseInDepartment(5, 25);
+        printEmployeesByDepartment(5);
 
     }
 }

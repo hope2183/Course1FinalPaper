@@ -62,8 +62,8 @@ public class Employee {
     }
 
     public int getId() {
-        this.id = id;
-        return id;
+
+        return this.id;
     }
 
 
