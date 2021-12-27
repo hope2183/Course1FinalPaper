@@ -87,9 +87,23 @@ public static void salaryIncreaseInDepartment (int department, float percentOfIn
 
                  }
 }}
+    public static void printEmployeesByDepWithSalaryLessNumber(int department, int number){
+        for (Employee employee:employees
+        ) {
+            if(employee !=null && employee.getDepartment()==department && employee.getSalaryMonth()<number){
+
+                System.out.println(employee.getId()+". Сотрудник: "+employee.getFullName()+", заработная плата: "+employee.getSalaryMonth());
+            }}}
+    public static void printEmployeesByDepWithSalaryMoreNumber(int department, int number){
+        for (Employee employee:employees
+        ) {
+            if(employee !=null && employee.getDepartment()==department && employee.getSalaryMonth()>=number){
+
+                System.out.println(employee.getId()+". Сотрудник: "+employee.getFullName()+", заработная плата: "+employee.getSalaryMonth());
+            }}}
     public static void main(String[] args) {
         System.out.println();
-        int department = 1;
+
         addEmployee(new Employee("Иванов", "Иван", "Иванович", 1, 70000));
         addEmployee(new Employee("Воробьев", "Петр", "Петрович", 1, 85000));
         addEmployee(new Employee("Сидорова", "Айгуль", "Сергеевна", 1, 120000));
@@ -100,19 +114,21 @@ public static void salaryIncreaseInDepartment (int department, float percentOfIn
         addEmployee(new Employee("Пак", "Сергей", "Валентинович", 4, 95000));
         addEmployee(new Employee("Директор", "Вячеслав", "Степанович", 5, 250000));
 
+        int department = 1;
         printEmployeesByDepartment(department);
         System.out.println("Затраты отдела на ЗП в месяц: "+calculateTotalSalaryInDepartment(department));
         System.out.println("Сотрудник с минимальной зп в отделе: "+findEmployeeWithMinSalaryInDepartment(department));
         System.out.println("Сотрудник с максимальной зп в отделе: "+findEmployeeWithMaxSalaryInDepartment(department));
-        System.out.println("Средняя зп в месяц по отделу: "+calculateAverageSalaryInDepartment(department));
 
-        salaryIncreaseInDepartment(5, 25);
-
-        float value = calculateAverageSalaryInDepartment(1);
+        float value = calculateAverageSalaryInDepartment(department);
         String result = String.format("%.2f",value);
         System.out.println("Средняя зп в месяц по отделу: "+result);
 
-        printEmployeesByDepartment(5);
+        salaryIncreaseInDepartment(department, 25);
+        printEmployeesByDepartment(department);
+
+        printEmployeesByDepWithSalaryLessNumber(department,90000);
+        printEmployeesByDepWithSalaryMoreNumber(department,120000);
     }
 }
 
