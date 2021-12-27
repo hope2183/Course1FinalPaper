@@ -77,13 +77,15 @@ public class MidMain {
         }
         return sum / employeeCount;
     }
+
 public static void salaryIncreaseInDepartment (int department, float percentOfIncrease){
     for (Employee employee:employees
     ) {
         if(employee!=null && employee.getDepartment()==department){
-            float currentSalary = employee.getSalaryMonth();
+            float currentSalary =employee.getSalaryMonth();
             employee.setSalaryMonth(currentSalary*(percentOfIncrease/100+1));
-        }
+
+                 }
 }}
     public static void main(String[] args) {
         System.out.println();
@@ -105,8 +107,12 @@ public static void salaryIncreaseInDepartment (int department, float percentOfIn
         System.out.println("Средняя зп в месяц по отделу: "+calculateAverageSalaryInDepartment(department));
 
         salaryIncreaseInDepartment(5, 25);
-        printEmployeesByDepartment(5);
 
+        float value = calculateAverageSalaryInDepartment(1);
+        String result = String.format("%.2f",value);
+        System.out.println("Средняя зп в месяц по отделу: "+result);
+
+        printEmployeesByDepartment(5);
     }
 }
 
